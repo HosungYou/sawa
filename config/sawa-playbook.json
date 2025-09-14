@@ -1,0 +1,238 @@
+{
+  "items": [
+    {
+      "facet": "claim",
+      "goal": "Contestable, scoped, evidence-addressable scientific claim",
+      "rubricLevels": {
+        "1": {
+          "description": "Weak: Overly broad, absolute, or non-contestable",
+          "criteria": ["Uses absolute terms (always/never)", "Lacks scope or conditions", "Presents obvious facts rather than arguable positions"]
+        },
+        "2": {
+          "description": "Developing: Shows some contestability but lacks precision",
+          "criteria": ["Some debatable elements but vague", "Limited scope specification", "Unclear evidence connection"]
+        },
+        "3": {
+          "description": "Proficient: Clear, contestable, and appropriately scoped",
+          "criteria": ["Clearly debatable position", "Appropriate scope and conditions", "Evidence-addressable claim"]
+        },
+        "4": {
+          "description": "Advanced: Sophisticated, nuanced, and precisely targeted",
+          "criteria": ["Highly nuanced position", "Precise scope with clear boundaries", "Strong theoretical grounding"]
+        }
+      },
+      "checklist": [
+        "Is it contestable/debatable?",
+        "Are scope/conditions specified?",
+        "Can it be verified with evidence?"
+      ],
+      "passThreshold": "meets_all",
+      "questions": [
+        "What specific research question are you investigating, and what do you predict the answer will be? Frame this as a testable claim about cause, effect, or relationship between variables."
+      ],
+      "nudges": [
+        "I see absolute language (always/all/never). Please specify conditions.",
+        "Add a sentence about what evidence could verify this claim.",
+        "Express a clear 'position' rather than just observational facts."
+      ],
+      "anchoredExamples": [
+        {"weak": "Technology always improves education.", "strong": "When integrated with teacher training, educational technology tends to improve student engagement in STEM subjects.", "nudge": "Specify conditions (when, where, for whom) and avoid absolute terms."},
+        {"weak": "Social media is bad.", "strong": "Excessive social media use (>3 hours daily) is associated with increased anxiety levels among adolescents.", "nudge": "Define 'excessive' and specify the population and outcome."},
+        {"weak": "Exercise helps health.", "strong": "Regular aerobic exercise (150+ minutes/week) reduces cardiovascular disease risk by approximately 30% in adults over 40.", "nudge": "Specify the type, amount, and target population with measurable outcomes."}
+      ]
+    },
+    {
+      "facet": "evidence",
+      "goal": "Targeted evidence plan with evaluation criteria",
+      "rubricLevels": {
+        "1": {
+          "description": "Weak: Vague or irrelevant evidence types",
+          "criteria": ["No specific source mentioned", "Evidence doesn't address claim", "No evaluation criteria"]
+        },
+        "2": {
+          "description": "Developing: General evidence types with some relevance",
+          "criteria": ["Some source specification", "Partial connection to claim", "Basic evaluation awareness"]
+        },
+        "3": {
+          "description": "Proficient: Specific evidence with clear evaluation plan",
+          "criteria": ["Specific sources and methods", "Clear claim connection", "Appropriate evaluation criteria"]
+        },
+        "4": {
+          "description": "Advanced: Comprehensive evidence strategy with rigorous evaluation",
+          "criteria": ["Multiple complementary sources", "Sophisticated evaluation framework", "Anticipates limitations"]
+        }
+      },
+      "checklist": [
+        "Are evidence types/sources identified?",
+        "Are evaluation criteria (reliability/validity etc.) included?",
+        "Does it directly connect to the claim?"
+      ],
+      "passThreshold": "meets_most",
+      "questions": [
+        "What specific types of evidence will you need to test your claim? Describe your data sources, methodology, or literature you'll examine.",
+        "What criteria will you use to evaluate whether this evidence is trustworthy and relevant to your claim?"
+      ],
+      "nudges": [
+        "Specify the source or collection method of evidence.",
+        "State 1-2 evaluation criteria (reliability, validity, reproducibility, etc.).",
+        "Explain the connection between claim and evidence in one sentence."
+      ],
+      "anchoredExamples": [
+        {"weak": "I'll look at studies.", "strong": "I'll analyze randomized controlled trials from PubMed (2015-2023) comparing technology-enhanced vs. traditional instruction, evaluating study quality using CONSORT guidelines.", "nudge": "Specify database, timeframe, study design, and quality criteria."},
+        {"weak": "Survey data will show this.", "strong": "Pre/post surveys using validated scales (Likert 1-7) with 200+ participants, controlling for prior experience and demographic factors.", "nudge": "Specify survey instrument, sample size, and control variables."}
+      ]
+    },
+    {
+      "facet": "reasoning",
+      "goal": "Explicit warrant that links evidence to claim",
+      "rubricLevels": {
+        "1": {
+          "description": "Weak: No clear logical connection explained",
+          "criteria": ["Missing warrant/rule", "Unclear mechanism", "No connecting logic"]
+        },
+        "2": {
+          "description": "Developing: Implicit or weak logical connection",
+          "criteria": ["Vague warrant", "Partial mechanism explanation", "Weak connecting language"]
+        },
+        "3": {
+          "description": "Proficient: Clear warrant with explicit mechanism",
+          "criteria": ["Clear rule/principle stated", "Explicit mechanism", "Strong connecting logic"]
+        },
+        "4": {
+          "description": "Advanced: Sophisticated warrant with nuanced understanding",
+          "criteria": ["Complex theoretical framework", "Multiple mechanisms", "Addresses scope limitations"]
+        }
+      },
+      "checklist": [
+        "Is a rule/mechanism presented explaining why evidence supports the claim?",
+        "Are generalization conditions clear?"
+      ],
+      "passThreshold": "meets_all",
+      "questions": [
+        "Explain the logical connection: WHY does your evidence support your claim? What rule, principle, or mechanism makes this connection valid?"
+      ],
+      "nudges": [
+        "Write the rule in one sentence using 'because/since/therefore'.",
+        "Specify the conditions under which generalization holds."
+      ],
+      "anchoredExamples": [
+        {"weak": "The data shows my claim is right.", "strong": "Since educational technology reduces cognitive load by providing visual scaffolds, students can allocate more mental resources to higher-order thinking, therefore improving engagement.", "nudge": "Explain the mechanism - HOW does your evidence lead to your claim?"},
+        {"weak": "Research proves it.", "strong": "Because regular exercise increases BDNF (brain-derived neurotrophic factor) production, which promotes neuroplasticity, aerobic activity enhances cognitive function in aging adults.", "nudge": "State the biological/psychological mechanism that connects exercise to cognitive benefits."}
+      ]
+    },
+    {
+      "facet": "backing",
+      "goal": "Minimal theoretical or empirical backing of the warrant",
+      "rubricLevels": {
+        "1": {
+          "description": "Weak: No theoretical or empirical support",
+          "criteria": ["No sources cited", "No theoretical foundation", "Unsupported assertions"]
+        },
+        "2": {
+          "description": "Developing: Weak or irrelevant support",
+          "criteria": ["Poor quality sources", "Tangentially related theory", "Minimal justification"]
+        },
+        "3": {
+          "description": "Proficient: Appropriate theoretical or empirical support",
+          "criteria": ["Credible sources cited", "Relevant theoretical framework", "Clear justification"]
+        },
+        "4": {
+          "description": "Advanced: Strong, comprehensive theoretical grounding",
+          "criteria": ["Multiple high-quality sources", "Sophisticated theoretical integration", "Addresses alternative frameworks"]
+        }
+      },
+      "checklist": [
+        "Are theoretical/prior research/meta-analysis foundations presented?",
+        "Does it justify the warrant (rule)?"
+      ],
+      "passThreshold": "meets_most",
+      "questions": [
+        "What established theory, prior research, or scholarly work supports the reasoning you just described? Provide 1-2 credible sources."
+      ],
+      "nudges": [
+        "Briefly mention 1-2 prior studies/theories.",
+        "If possible, provide simple citation format (author, year)."
+      ],
+      "anchoredExamples": [
+        {"weak": "Many studies support this.", "strong": "Cognitive Load Theory (Sweller, 1988) and meta-analyses by Clark & Mayer (2016) demonstrate that multimedia learning principles improve retention through dual-channel processing.", "nudge": "Name specific theories and cite key researchers with dates."},
+        {"weak": "It's well known.", "strong": "Social Cognitive Theory (Bandura, 1991) and systematic reviews (Schunk & DiBenedetto, 2020) show that self-efficacy beliefs predict academic achievement across domains.", "nudge": "Reference established theoretical frameworks and recent reviews."}
+      ]
+    },
+    {
+      "facet": "qualifier",
+      "goal": "Calibrated claim strength with clear conditions",
+      "rubricLevels": {
+        "1": {
+          "description": "Weak: Overconfident or absolute language",
+          "criteria": ["Uses 'always/never' language", "No qualifiers present", "Ignores limitations"]
+        },
+        "2": {
+          "description": "Developing: Some qualifiers but inconsistent",
+          "criteria": ["Few qualifiers used", "Inconsistent confidence", "Vague limitations"]
+        },
+        "3": {
+          "description": "Proficient: Appropriate qualifiers and realistic confidence",
+          "criteria": ["Consistent qualifying language", "Realistic confidence level", "Clear limitations stated"]
+        },
+        "4": {
+          "description": "Advanced: Nuanced confidence calibration",
+          "criteria": ["Sophisticated qualifier use", "Context-dependent confidence", "Anticipates boundary conditions"]
+        }
+      },
+      "checklist": [
+        "Are qualifiers (generally/tendency/possibility etc.) or conditions included?",
+        "Is claim strength appropriately calibrated?"
+      ],
+      "passThreshold": "meets_all",
+      "questions": [
+        "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty."
+      ],
+      "nudges": [
+        "Use expressions like 'generally/tends to/likely' and conditional clauses.",
+        "Briefly mention situations where it might not hold."
+      ],
+      "anchoredExamples": [
+        {"weak": "This always works perfectly.", "strong": "This approach tends to be effective for motivated students in well-resourced environments, but may be less successful with disengaged learners or in contexts lacking technological infrastructure.", "nudge": "Replace absolute language with 'tends to/likely' and specify conditions."},
+        {"weak": "Everyone benefits from this.", "strong": "Most participants (approximately 70-80%) show improvement, particularly those with moderate baseline anxiety levels, though effects may be limited for severe cases requiring clinical intervention.", "nudge": "Provide percentage ranges and specify which populations benefit most."}
+      ]
+    },
+    {
+      "facet": "rebuttal",
+      "goal": "Serious counterargument and response strategy",
+      "rubricLevels": {
+        "1": {
+          "description": "Weak: Weak counterargument or no response",
+          "criteria": ["Strawman arguments", "No meaningful objection", "Dismissive response"]
+        },
+        "2": {
+          "description": "Developing: Moderate counterargument with basic response",
+          "criteria": ["Some valid objections", "Partially addresses counter", "Simple response strategy"]
+        },
+        "3": {
+          "description": "Proficient: Strong counterargument with clear response",
+          "criteria": ["Serious, fair objection", "Acknowledges counter strength", "Clear response strategy"]
+        },
+        "4": {
+          "description": "Advanced: Sophisticated counterargument with nuanced response",
+          "criteria": ["Multiple strong objections", "Demonstrates deep understanding", "Sophisticated response strategy"]
+        }
+      },
+      "checklist": [
+        "Is a strong counterargument fairly presented?",
+        "Is a rebuttal/response strategy briefly presented?"
+      ],
+      "passThreshold": "meets_most",
+      "questions": [
+        "What is the strongest objection someone could raise against your argument? Present this counterargument fairly, then explain how you would address it."
+      ],
+      "nudges": [
+        "Make the counterargument stronger (focus on strengths, not weaknesses).",
+        "Summarize your response strategy in one sentence."
+      ],
+      "anchoredExamples": [
+        {"weak": "Some people might disagree because they're wrong.", "strong": "Critics could argue that technology creates dependency and reduces human connection in learning environments, citing studies showing decreased face-to-face interaction. I would respond by advocating for blended approaches that combine digital tools with collaborative activities.", "nudge": "Present the counterargument seriously and specifically, then offer a balanced response."},
+        {"weak": "The only objection is cost.", "strong": "Skeptics could legitimately question whether correlation studies can establish causation, pointing to confounding variables like socioeconomic status and prior achievement. I would address this by emphasizing longitudinal designs with statistical controls and replication across diverse populations.", "nudge": "Acknowledge methodological limitations and propose research design solutions."}
+      ]
+    }
+  ]
+}

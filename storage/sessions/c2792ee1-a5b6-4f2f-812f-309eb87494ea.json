@@ -1,0 +1,59 @@
+{
+  "id": "c2792ee1-a5b6-4f2f-812f-309eb87494ea",
+  "createdAt": "2025-09-14T23:02:18.253Z",
+  "updatedAt": "2025-09-14T23:02:18.253Z",
+  "currentIndex": 0,
+  "sequence": [
+    "claim",
+    "evidence",
+    "reasoning",
+    "backing",
+    "qualifier",
+    "rebuttal"
+  ],
+  "facets": {
+    "claim": {
+      "facet": "claim",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "evidence": {
+      "facet": "evidence",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "reasoning": {
+      "facet": "reasoning",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "backing": {
+      "facet": "backing",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "qualifier": {
+      "facet": "qualifier",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "rebuttal": {
+      "facet": "rebuttal",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    }
+  },
+  "history": []
+}

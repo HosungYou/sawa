@@ -1,0 +1,198 @@
+{
+  "id": "012b928d-c600-4211-a1f6-16cb220fbb21",
+  "createdAt": "2025-09-14T23:03:58.859Z",
+  "updatedAt": "2025-09-14T23:08:36.538Z",
+  "currentIndex": 5,
+  "sequence": [
+    "claim",
+    "evidence",
+    "reasoning",
+    "backing",
+    "qualifier",
+    "rebuttal"
+  ],
+  "facets": {
+    "claim": {
+      "facet": "claim",
+      "questionIndex": 0,
+      "passed": true,
+      "level": 4,
+      "nudges": [],
+      "answer": "My research question is whether UTAUT2 predictors such as performance expectancy, effort expectancy, and social influence differentially influence behavioral intention to adopt AI in higher education before versus after the rise of generative AI, and I predict that performance expectancy will show the strongest positive effect and that its influence will be significantly stronger in the post-generative AI era."
+    },
+    "evidence": {
+      "facet": "evidence",
+      "questionIndex": 0,
+      "passed": true,
+      "level": 3,
+      "nudges": [],
+      "answer": "To test this claim, I will compile time-stamped, peer-reviewed quantitative studies and institutional survey datasets on AI adoption in higher education that report UTAUT2 constructs and behavioral intention or use, extract effect sizes with sample and context metadata, code era by data-collection date pre-2023 versus post-2023, assess study quality and risk of bias, and then conduct a preregistered three-level meta-analytic structural equation model with era as a moderator, publication-bias diagnostics, measurement-invariance sensitivity checks, and subgroup analyses by role, discipline, and region."
+    },
+    "reasoning": {
+      "facet": "reasoning",
+      "questionIndex": 0,
+      "passed": true,
+      "level": 4,
+      "nudges": [],
+      "answer": "The evidence supports my claim because UTAUT2 provides a validated causal framework where constructs such as performance expectancy and effort expectancy predict behavioral intention, meta-analytic aggregation reduces error and bias across heterogeneous studies, and the era-based moderator captures the mechanism that generative AI’s greater visibility and utility strengthens the performance expectancy–intention pathway, making the observed statistical moderation logically consistent with the theoretical principle that adoption increases when perceived benefits outweigh effort and risk."
+    },
+    "backing": {
+      "facet": "backing",
+      "questionIndex": 0,
+      "passed": true,
+      "level": 3,
+      "nudges": [],
+      "answer": "Venkatesh, Thong, and Xu’s UTAUT2 formulation, which establishes performance expectancy and effort expectancy as proximal determinants of behavioral intention (MIS Quarterly, 2012), together with King and He’s meta-analysis demonstrating robust expectancy–intention links across technologies and contexts (MIS Quarterly, 2006), provide the theoretical and empirical foundation for my moderated meta-analytic claim."
+    },
+    "qualifier": {
+      "facet": "qualifier",
+      "questionIndex": 0,
+      "passed": true,
+      "level": 4,
+      "nudges": [],
+      "answer": "I would say I am generally confident in the claim because prior research consistently shows that performance expectancy tends to predict behavioral intention, especially when the technology is perceived as useful, and the effect is likely stronger in the generative AI era when utility is more visible, but this relationship may not hold in contexts where institutional barriers, high perceived risks, or weak measurement practices undermine the expectancy–intention pathway."
+    },
+    "rebuttal": {
+      "facet": "rebuttal",
+      "questionIndex": 0,
+      "passed": true,
+      "level": 3,
+      "nudges": [],
+      "answer": "A strongest counterargument is that the apparent post-2023 strengthening of the performance expectancy to intention link likely reflects structural breaks and construct drift rather than true causal change, because samples shifted from early adopters to mandated users, measures lost invariance across eras, self-reports inflated intention due to institutional policies and social desirability, and publication filters amplified hype while actual use remained policy driven; my response strategy is to preregister and implement a three-level meta-analytic SEM with multi-group measurement invariance and DIF tests, model publication selection, include negative controls and time-window exclusions, meta-regress sampling and policy covariates, triangulate with telemetry on actual use, and run Bayesian and frequentist sensitivity analyses to quantify how much unmeasured confounding would be needed to erase the moderation signal."
+    }
+  },
+  "history": [
+    {
+      "facet": "claim",
+      "question": "What specific research question are you investigating, and what do you predict the answer will be? Frame this as a testable claim about cause, effect, or relationship between variables.",
+      "answer": "My research question is whether UTAUT2 predictors such as performance expectancy, effort expectancy, and social influence differentially influence behavioral intention to adopt AI in higher education before versus after the rise of generative AI, and I predict that performance expectancy will show the strongest positive effect and that its influence will be significantly stronger in the post-generative AI era.",
+      "passed": true,
+      "level": 4,
+      "nudges": [],
+      "timestamp": "2025-09-14T23:06:01.137Z"
+    },
+    {
+      "facet": "evidence",
+      "question": "What specific types of evidence will you need to test your claim? Describe your data sources, methodology, or literature you'll examine.",
+      "answer": "To test this claim, I will compile time-stamped, peer-reviewed quantitative studies and institutional survey datasets on AI adoption in higher education that report UTAUT2 constructs and behavioral intention or use, extract effect sizes with sample and context metadata, code era by data-collection date pre-2023 versus post-2023, assess study quality and risk of bias, and then conduct a preregistered three-level meta-analytic structural equation model with era as a moderator, publication-bias diagnostics, measurement-invariance sensitivity checks, and subgroup analyses by role, discipline, and region.",
+      "passed": true,
+      "level": 3,
+      "nudges": [],
+      "timestamp": "2025-09-14T23:06:21.632Z"
+    },
+    {
+      "facet": "reasoning",
+      "question": "Explain the logical connection: WHY does your evidence support your claim? What rule, principle, or mechanism makes this connection valid?",
+      "answer": "The evidence supports my claim because UTAUT2 provides a validated causal framework where constructs such as performance expectancy and effort expectancy predict behavioral intention, meta-analytic aggregation reduces error and bias across heterogeneous studies, and the era-based moderator captures the mechanism that generative AI’s greater visibility and utility strengthens the performance expectancy–intention pathway, making the observed statistical moderation logically consistent with the theoretical principle that adoption increases when perceived benefits outweigh effort and risk.",
+      "passed": true,
+      "level": 4,
+      "nudges": [],
+      "timestamp": "2025-09-14T23:06:30.965Z"
+    },
+    {
+      "facet": "backing",
+      "question": "What established theory, prior research, or scholarly work supports the reasoning you just described? Provide 1-2 credible sources.",
+      "answer": "Venkatesh, Thong, and Xu’s UTAUT2 formulation, which establishes performance expectancy and effort expectancy as proximal determinants of behavioral intention (MIS Quarterly, 2012), together with King and He’s meta-analysis demonstrating robust expectancy–intention links across technologies and contexts (MIS Quarterly, 2006), provide the theoretical and empirical foundation for my moderated meta-analytic claim.",
+      "passed": true,
+      "level": 3,
+      "nudges": [],
+      "timestamp": "2025-09-14T23:06:57.170Z"
+    },
+    {
+      "facet": "qualifier",
+      "question": "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty.",
+      "answer": "I am moderately confident in the claim given the strong prior evidence for UTAUT2 pathways and expect it to hold when studies use validated measures, report behavioral intention or use with clear data-collection dates, and operate in contexts where generative AI measurably increases perceived utility, but it may attenuate or fail when constructs are poorly measured, when institutional risk or policy barriers dominate perceived benefits, when samples are highly nonrepresentative, or when novelty effects and media salience rather than genuine performance gains drive intention.",
+      "passed": false,
+      "level": 2,
+      "nudges": [
+        "Use expressions like 'generally/tends to/likely' and conditional clauses.",
+        "Briefly mention situations where it might not hold.",
+        "주장의 강도를 한정자/조건으로 조정해 보세요."
+      ],
+      "timestamp": "2025-09-14T23:07:10.337Z"
+    },
+    {
+      "facet": "qualifier",
+      "question": "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty.",
+      "answer": "I am moderately confident in the claim given the strong prior evidence for UTAUT2 pathways and expect it to hold when studies use validated measures, report behavioral intention or use with clear data-collection dates, and operate in contexts where generative AI measurably increases perceived utility, but it may attenuate or fail when constructs are poorly measured, when institutional risk or policy barriers dominate perceived benefits, when samples are highly nonrepresentative, or when novelty effects and media salience rather than genuine performance gains drive intention.",
+      "passed": false,
+      "level": 2,
+      "nudges": [
+        "Use expressions like 'generally/tends to/likely' and conditional clauses.",
+        "Briefly mention situations where it might not hold.",
+        "주장의 강도를 한정자/조건으로 조정해 보세요."
+      ],
+      "timestamp": "2025-09-14T23:07:21.268Z"
+    },
+    {
+      "facet": "qualifier",
+      "question": "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty.",
+      "answer": "I am moderately confident in the claim given the strong prior evidence for UTAUT2 pathways and expect it to hold when studies use validated measures, report behavioral intention or use with clear data-collection dates, and operate in contexts where generative AI measurably increases perceived utility, but it may attenuate or fail when constructs are poorly measured, when institutional risk or policy barriers dominate perceived benefits, when samples are highly nonrepresentative, or when novelty effects and media salience rather than genuine performance gains drive intention.",
+      "passed": false,
+      "level": 2,
+      "nudges": [
+        "Use expressions like 'generally/tends to/likely' and conditional clauses.",
+        "Briefly mention situations where it might not hold.",
+        "주장의 강도를 한정자/조건으로 조정해 보세요."
+      ],
+      "timestamp": "2025-09-14T23:07:27.416Z"
+    },
+    {
+      "facet": "qualifier",
+      "question": "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty.",
+      "answer": "ㅇㄹㅁ",
+      "passed": false,
+      "level": 2,
+      "nudges": [
+        "Use expressions like 'generally/tends to/likely' and conditional clauses.",
+        "Briefly mention situations where it might not hold.",
+        "주장의 강도를 한정자/조건으로 조정해 보세요."
+      ],
+      "timestamp": "2025-09-14T23:07:51.259Z"
+    },
+    {
+      "facet": "qualifier",
+      "question": "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty.",
+      "answer": "ㅁㄴㄹㅇ",
+      "passed": false,
+      "level": 2,
+      "nudges": [
+        "Use expressions like 'generally/tends to/likely' and conditional clauses.",
+        "Briefly mention situations where it might not hold.",
+        "주장의 강도를 한정자/조건으로 조정해 보세요."
+      ],
+      "timestamp": "2025-09-14T23:07:53.125Z"
+    },
+    {
+      "facet": "qualifier",
+      "question": "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty.",
+      "answer": "I would say I am generally confident in the claim because prior research consistently shows that performance expectancy tends to predict behavioral intention, especially when the technology is perceived as useful, and the effect is likely stronger in the generative AI era when utility is more visible, but this relationship may not hold in contexts where institutional barriers, high perceived risks, or weak measurement practices undermine the expectancy–intention pathway.",
+      "passed": true,
+      "level": 4,
+      "nudges": [],
+      "timestamp": "2025-09-14T23:08:07.704Z"
+    },
+    {
+      "facet": "rebuttal",
+      "question": "What is the strongest objection someone could raise against your argument? Present this counterargument fairly, then explain how you would address it.",
+      "answer": "A fair strongest objection is that any observed post-2023 strengthening of the performance expectancy to intention link could simply reflect confounds such as shifting samples, altered measurement properties, publication bias, or short-lived hype that inflates stated intentions without real utility or use, to which I would respond by preregistering inclusion criteria, coding and meta-regressing key covariates, conducting multi-group measurement invariance checks, applying three-level models with selection models and p-curve diagnostics, running leave-one-out and time-window sensitivity analyses that exclude peak media periods, and triangulating with longitudinal or institutional telemetry on actual use to test whether the moderation persists beyond self-report.",
+      "passed": false,
+      "level": 2,
+      "nudges": [
+        "Make the counterargument stronger (focus on strengths, not weaknesses).",
+        "Summarize your response strategy in one sentence.",
+        "강한 반대 주장과 대응 전략을 공정하게 제시하세요."
+      ],
+      "timestamp": "2025-09-14T23:08:20.035Z"
+    },
+    {
+      "facet": "rebuttal",
+      "question": "What is the strongest objection someone could raise against your argument? Present this counterargument fairly, then explain how you would address it.",
+      "answer": "A strongest counterargument is that the apparent post-2023 strengthening of the performance expectancy to intention link likely reflects structural breaks and construct drift rather than true causal change, because samples shifted from early adopters to mandated users, measures lost invariance across eras, self-reports inflated intention due to institutional policies and social desirability, and publication filters amplified hype while actual use remained policy driven; my response strategy is to preregister and implement a three-level meta-analytic SEM with multi-group measurement invariance and DIF tests, model publication selection, include negative controls and time-window exclusions, meta-regress sampling and policy covariates, triangulate with telemetry on actual use, and run Bayesian and frequentist sensitivity analyses to quantify how much unmeasured confounding would be needed to erase the moderation signal.",
+      "passed": true,
+      "level": 3,
+      "nudges": [],
+      "timestamp": "2025-09-14T23:08:36.538Z"
+    }
+  ]
+}
