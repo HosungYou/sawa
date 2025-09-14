@@ -42,15 +42,22 @@ export default function CoachPage() {
   }, []);
 
   async function submit() {
-    if (!sessionId || isSubmitting || !facet || !answer.trim()) return;
+    console.log('Submit clicked:', { sessionId, facet, answer: answer?.length });
+    if (!sessionId || isSubmitting || !facet || !answer.trim()) {
+      console.log('Submit blocked:', { sessionId: !!sessionId, isSubmitting, facet, hasAnswer: !!answer.trim() });
+      return;
+    }
     setIsSubmitting(true);
     try {
+      console.log('Making API call...');
       const res = await fetch("/api/session/answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: sessionId, facet, answer })
       });
+      console.log('API response status:', res.status);
       const data = await res.json();
+      console.log('API response data:', data);
       if (data.evaluation) {
         setLevel(data.evaluation.level);
         if (!data.evaluation.passed) {
@@ -68,6 +75,9 @@ export default function CoachPage() {
         setAnswer("");
         setLevel(null);
       }
+    } catch (error) {
+      console.error('Submit error:', error);
+      alert('오류가 발생했습니다: ' + (error as Error).message);
     } finally {
       setIsSubmitting(false);
     }
@@ -198,8 +208,14 @@ export default function CoachPage() {
                           ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                           : 'bg-blue-600 text-white hover:bg-blue-700'
                       }`}
-                      onClick={submit}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Button clicked - before submit call');
+                        submit();
+                      }}
                       disabled={!answer.trim() || isSubmitting || !facet}
+                      type="button"
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
