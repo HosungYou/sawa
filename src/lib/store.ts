@@ -19,7 +19,7 @@ export async function loadSession(id: string): Promise<SessionState | null> {
     const p = path.join(SESS_DIR, `${id}.json`);
     const raw = await fs.readFile(p, "utf-8");
     return JSON.parse(raw) as SessionState;
-  } catch (e) {
+  } catch {
     return null;
   }
 }

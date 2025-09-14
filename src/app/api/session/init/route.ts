@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { initializeSession, getNextQuestion } from '@/lib/flow';
 import { saveSession } from '@/lib/store';
 import { randomUUID } from 'crypto';
 
 export const runtime = 'nodejs';
 
-export async function POST(_req: NextRequest) {
+export async function POST() {
   const id = randomUUID();
   const state = await initializeSession(id);
   await saveSession(state);
