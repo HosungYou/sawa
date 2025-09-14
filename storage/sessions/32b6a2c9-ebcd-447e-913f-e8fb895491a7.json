@@ -1,0 +1,78 @@
+{
+  "id": "32b6a2c9-ebcd-447e-913f-e8fb895491a7",
+  "createdAt": "2025-09-14T23:31:22.811Z",
+  "updatedAt": "2025-09-14T23:31:38.011Z",
+  "currentIndex": 0,
+  "sequence": [
+    "claim",
+    "evidence",
+    "reasoning",
+    "backing",
+    "qualifier",
+    "rebuttal"
+  ],
+  "facets": {
+    "claim": {
+      "facet": "claim",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 3,
+      "nudges": [
+        "I see absolute language (always/all/never). Please specify conditions.",
+        "Add a sentence about what evidence could verify this claim.",
+        "Express a clear 'position' rather than just observational facts."
+      ],
+      "answer": "To test this claim, I will compile time-stamped, peer-reviewed quantitative studies and institutional survey datasets on AI adoption in higher education that report UTAUT2 constructs and behavioral intention or use, extract effect sizes with sample and context metadata, code era by data-collection date pre-2023 versus post-2023, assess study quality and risk of bias, and then conduct a preregistered three-level meta-analytic structural equation model with era as a moderator, publication-bias diagnostics, measurement-invariance sensitivity checks, and subgroup analyses by role, discipline, and region."
+    },
+    "evidence": {
+      "facet": "evidence",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "reasoning": {
+      "facet": "reasoning",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "backing": {
+      "facet": "backing",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "qualifier": {
+      "facet": "qualifier",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    },
+    "rebuttal": {
+      "facet": "rebuttal",
+      "questionIndex": 0,
+      "passed": false,
+      "level": 1,
+      "nudges": []
+    }
+  },
+  "history": [
+    {
+      "facet": "claim",
+      "question": "What specific research question are you investigating, and what do you predict the answer will be? Frame this as a testable claim about cause, effect, or relationship between variables.",
+      "answer": "To test this claim, I will compile time-stamped, peer-reviewed quantitative studies and institutional survey datasets on AI adoption in higher education that report UTAUT2 constructs and behavioral intention or use, extract effect sizes with sample and context metadata, code era by data-collection date pre-2023 versus post-2023, assess study quality and risk of bias, and then conduct a preregistered three-level meta-analytic structural equation model with era as a moderator, publication-bias diagnostics, measurement-invariance sensitivity checks, and subgroup analyses by role, discipline, and region.",
+      "passed": false,
+      "level": 3,
+      "nudges": [
+        "I see absolute language (always/all/never). Please specify conditions.",
+        "Add a sentence about what evidence could verify this claim.",
+        "Express a clear 'position' rather than just observational facts."
+      ],
+      "timestamp": "2025-09-14T23:31:38.011Z"
+    }
+  ]
+}
