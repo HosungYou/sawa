@@ -26,6 +26,7 @@ export default function CoachPage() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [completedFacets, setCompletedFacets] = useState<Set<Facet>>(new Set());
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isInitialized, setIsInitialized] = useState<boolean>(false);
 
   useEffect(() => {
     (async () => {
@@ -36,11 +37,12 @@ export default function CoachPage() {
       setQuestion(data.next.question);
       setDone(data.next.done);
       setCurrentIndex(FACET_ORDER.indexOf(data.next.facet));
+      setIsInitialized(true);
     })();
   }, []);
 
   async function submit() {
-    if (!sessionId || isSubmitting) return;
+    if (!sessionId || isSubmitting || !facet || !answer.trim()) return;
     setIsSubmitting(true);
     try {
       const res = await fetch("/api/session/answer", {
@@ -79,6 +81,17 @@ export default function CoachPage() {
   }
 
   const progressPercentage = ((currentIndex + (completedFacets.has(facet) ? 1 : 0)) / FACET_ORDER.length) * 100;
+
+  if (!isInitialized) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Initializing SAWA Coach...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -181,12 +194,12 @@ export default function CoachPage() {
                   <div className="flex gap-3">
                     <button
                       className={`px-6 py-2 rounded-md font-medium transition-colors ${
-                        !answer.trim() || isSubmitting
+                        !answer.trim() || isSubmitting || !facet
                           ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                           : 'bg-blue-600 text-white hover:bg-blue-700'
                       }`}
                       onClick={submit}
-                      disabled={!answer.trim() || isSubmitting}
+                      disabled={!answer.trim() || isSubmitting || !facet}
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
