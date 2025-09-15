@@ -6,7 +6,7 @@ export type Facet =
   | "qualifier"
   | "rebuttal";
 
-export type PassThreshold = "meets_all" | "meets_most";
+export type PassThreshold = "meets_all" | "meets_most" | "proficient";
 
 export interface AnchoredExample {
   weak: string;
