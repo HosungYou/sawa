@@ -191,7 +191,7 @@ export default function CoachPage() {
                       Please provide your response
                     </label>
                     <textarea
-                      className="w-full border border-gray-300 rounded-md p-3 h-32 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical"
+                      className="w-full border border-gray-300 rounded-md p-3 h-32 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical"
                       value={answer}
                       onChange={e=>setAnswer(e.target.value)}
                       placeholder="Enter your response here..."
