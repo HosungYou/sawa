@@ -108,7 +108,7 @@ export default function CoachPage() {
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <h1 className="text-2xl font-bold text-gray-900">SAWA – Socratic Coach</h1>
-          <p className="text-sm text-gray-600 mt-1">Socratic Writing Coach for Argument Structure Development</p>
+          <p className="text-sm text-gray-900 mt-1">Socratic Writing Coach for Argument Structure Development</p>
         </div>
       </div>
 
@@ -121,7 +121,7 @@ export default function CoachPage() {
 
               {/* Progress Bar */}
               <div className="mb-4">
-                <div className="flex justify-between text-xs text-gray-600 mb-1">
+                <div className="flex justify-between text-xs text-gray-700 mb-1">
                   <span>Progress</span>
                   <span>{Math.round(progressPercentage)}%</span>
                 </div>
@@ -148,7 +148,7 @@ export default function CoachPage() {
                           ? 'bg-blue-50 border border-blue-200 text-blue-800'
                           : isCompleted || isPast
                           ? 'bg-green-50 text-green-800'
-                          : 'bg-gray-50 text-gray-600'
+                          : 'bg-gray-50 text-gray-800'
                       }`}
                     >
                       <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold mr-3 ${
@@ -156,7 +156,7 @@ export default function CoachPage() {
                           ? 'bg-blue-600 text-white'
                           : isCompleted || isPast
                           ? 'bg-green-600 text-white'
-                          : 'bg-gray-300 text-gray-600'
+                          : 'bg-gray-300 text-gray-800'
                       }`}>
                         {isCompleted || isPast ? '✓' : index + 1}
                       </div>
@@ -178,16 +178,16 @@ export default function CoachPage() {
                     <h2 className="text-lg font-semibold text-gray-900">
                       {FACET_LABELS[facet]} Step
                     </h2>
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-gray-700">
                       {currentIndex + 1} / {FACET_ORDER.length}
                     </span>
                   </div>
-                  <div className="text-gray-700 leading-relaxed">{question}</div>
+                  <div className="text-gray-900 leading-relaxed">{question}</div>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 mb-2">
                       Please provide your response
                     </label>
                     <textarea
@@ -196,7 +196,7 @@ export default function CoachPage() {
                       onChange={e=>setAnswer(e.target.value)}
                       placeholder="Enter your response here..."
                     />
-                    <div className="text-xs text-gray-500 mt-1">
+                    <div className="text-xs text-gray-600 mt-1">
                       Character count: {answer.length}
                     </div>
                   </div>
@@ -275,7 +275,7 @@ export default function CoachPage() {
                   </div>
                 )}
 
-                {!!nudges.length && (
+                {nudges.length > 0 && (
                   <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
                     <div className="flex items-start">
                       <div className="flex-shrink-0">
@@ -314,10 +314,10 @@ export default function CoachPage() {
               <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
                 <div className="border-b pb-4 mb-4">
                   <h3 className="text-lg font-semibold text-gray-900">Generated Prep Sheet</h3>
-                  <p className="text-sm text-gray-600 mt-1">Copy the content below for your use</p>
+                  <p className="text-sm text-gray-700 mt-1">Copy the content below for your use</p>
                 </div>
                 <div className="bg-gray-50 rounded border p-4 max-h-96 overflow-y-auto">
-                  <pre className="whitespace-pre-wrap text-sm text-gray-800">{exported}</pre>
+                  <pre className="whitespace-pre-wrap text-sm text-gray-900">{exported}</pre>
                 </div>
                 <div className="mt-4 flex gap-2">
                   <button
