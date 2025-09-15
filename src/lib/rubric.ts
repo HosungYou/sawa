@@ -2,7 +2,9 @@ import { Facet, FacetEvaluation, PlaybookItem } from "./types";
 
 // Enhanced pattern detection functions
 function containsAbsoluteLanguage(text: string): boolean {
-  return /(always|never|all|every|everything|completely|entirely|totally|absolutely|invariably|without exception)/i.test(text);
+  // More specific absolute language detection - avoid false positives with common words
+  return /\b(always|never|every|everything|completely|entirely|totally|absolutely|invariably|without exception)\b/i.test(text) ||
+         /\ball\s+(students|faculty|people|cases|research|studies|evidence)\b/i.test(text);
 }
 
 function hasConditionMarker(text: string): boolean {
@@ -61,20 +63,25 @@ function calculateClaimLevel(text: string): {level: 1 | 2 | 3 | 4, issues: strin
   const isDebatable = isContestable(text);
   const length = text.length;
 
+  // Only flag absolute language if it's present AND no conditions are specified
   if (hasAbsolute && !hasConditions) {
     issues.push("I see absolute language (always/all/never). Please specify conditions.");
   }
+
+  // Only flag if not debatable
   if (!isDebatable) {
     issues.push("Express a clear 'position' rather than just observational facts.");
   }
-  if (!hasConditions) {
+
+  // Only flag if no evidence/methodology mention and no conditions
+  if (!hasConditions && !/(evidence|data|study|research|experiment|analysis|method)/i.test(text)) {
     issues.push("Add a sentence about what evidence could verify this claim.");
   }
 
-  // Sophisticated level calculation
-  if (isDebatable && hasConditions && !hasAbsolute && length > 50) return {level: 4, issues};
-  if (isDebatable && (hasConditions || length > 30)) return {level: 3, issues};
-  if (isDebatable || hasConditions) return {level: 2, issues};
+  // Sophisticated level calculation - pass if meets criteria and has few issues
+  if (isDebatable && hasConditions && !hasAbsolute && length > 50 && issues.length === 0) return {level: 4, issues};
+  if (isDebatable && (hasConditions || length > 30) && issues.length <= 1) return {level: 3, issues};
+  if ((isDebatable || hasConditions) && issues.length <= 2) return {level: 2, issues};
   return {level: 1, issues};
 }
 
@@ -202,7 +209,9 @@ export function evaluateFacetAnswer(item: PlaybookItem, answer: string): FacetEv
       result = {level: 1, issues: ["Unknown facet type"]};
   }
 
-  const passed = item.passThreshold === "meets_all" ? result.level >= 4 : result.level >= 3;
+  const passed = item.passThreshold === "meets_all" ? result.level >= 4 :
+                item.passThreshold === "proficient" ? result.level >= 3 :
+                result.level >= 2;
   const mergedNudges = passed ? [] : Array.from(new Set([...(item.nudges || []), ...result.issues])).slice(0, 3);
 
   return { passed, level: result.level, nudges: mergedNudges };

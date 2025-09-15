@@ -26,7 +26,7 @@
         "Are scope/conditions specified?",
         "Can it be verified with evidence?"
       ],
-      "passThreshold": "meets_all",
+      "passThreshold": "proficient",
       "questions": [
         "What specific research question are you investigating, and what do you predict the answer will be? Frame this as a testable claim about cause, effect, or relationship between variables."
       ],
@@ -107,7 +107,7 @@
         "Is a rule/mechanism presented explaining why evidence supports the claim?",
         "Are generalization conditions clear?"
       ],
-      "passThreshold": "meets_all",
+      "passThreshold": "proficient",
       "questions": [
         "Explain the logical connection: WHY does your evidence support your claim? What rule, principle, or mechanism makes this connection valid?"
       ],
@@ -183,7 +183,7 @@
         "Are qualifiers (generally/tendency/possibility etc.) or conditions included?",
         "Is claim strength appropriately calibrated?"
       ],
-      "passThreshold": "meets_all",
+      "passThreshold": "proficient",
       "questions": [
         "How confident are you in your claim? Under what conditions might it be true, and when might it not apply? Use qualifying language to show appropriate certainty."
       ],

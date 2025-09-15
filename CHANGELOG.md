@@ -1,5 +1,28 @@
 # SAWA Release Notes
 
+## v1.3.1 - Evaluation Logic Fixes
+*Release Date: September 14, 2024*
+
+### 🐛 Bug Fixes
+
+#### Fixed Evaluation Logic Issues
+- **Resolved identical feedback loop**: Fixed issue where users received same feedback repeatedly without progression
+- **Improved absolute language detection**: Refined pattern matching to avoid false positives with common words like "all"
+- **Enhanced pass threshold logic**: Changed default threshold from "meets_all" (Level 4) to "proficient" (Level 3) for better progression
+- **Fixed condition detection**: Corrected logic for detecting conditional statements and evidence mentions
+
+#### Technical Improvements
+- **Pattern Refinement**: Used word boundary regex (`\b`) for more precise absolute language detection
+- **Logic Restructuring**: Improved evaluation criteria to prevent conflicting feedback
+- **Threshold Optimization**: Better balance between rigor and accessibility in evaluation standards
+
+### 🚀 Impact
+- Users can now progress through coaching steps more fluidly
+- Feedback is more contextually appropriate and actionable
+- Evaluation standards better reflect real-world research writing expectations
+
+---
+
 ## v1.3.0 - Enhanced Evaluation Engine Release
 *Release Date: September 14, 2024*
 
