@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import type { SessionState } from "@/lib/types";
 
 type Facet = "claim" | "evidence" | "reasoning" | "backing" | "qualifier" | "rebuttal";
 
@@ -16,6 +17,7 @@ const FACET_ORDER: Facet[] = ["claim", "evidence", "reasoning", "backing", "qual
 
 export default function CoachPage() {
   const [sessionId, setSessionId] = useState<string>("");
+  const [sessionState, setSessionState] = useState<SessionState | null>(null);
   const [facet, setFacet] = useState<Facet>("claim");
   const [question, setQuestion] = useState<string>("");
   const [answer, setAnswer] = useState<string>("");
@@ -37,6 +39,7 @@ export default function CoachPage() {
       setQuestion(data.next.question);
       setDone(data.next.done);
       setCurrentIndex(FACET_ORDER.indexOf(data.next.facet));
+      setSessionState(data.state);
       setIsInitialized(true);
     })();
   }, []);
@@ -53,12 +56,12 @@ export default function CoachPage() {
       const res = await fetch("/api/session/answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: sessionId, facet, answer })
+        body: JSON.stringify({ id: sessionId, facet, answer, state: sessionState })
       });
       console.log('API response status:', res.status);
       const data = await res.json();
       console.log('API response data:', data);
-      if (data.evaluation) {
+      if (data && data.evaluation) {
         setLevel(data.evaluation.level);
         if (!data.evaluation.passed) {
           setNudges(data.evaluation.nudges || []);
@@ -67,10 +70,15 @@ export default function CoachPage() {
           setCompletedFacets(prev => new Set([...prev, facet]));
         }
       }
-      setFacet(data.next.facet);
-      setQuestion(data.next.question);
-      setDone(data.next.done);
-      setCurrentIndex(FACET_ORDER.indexOf(data.next.facet));
+      if (data && data.next && data.next.facet) {
+        setFacet(data.next.facet);
+        setQuestion(data.next.question || '');
+        setDone(!!data.next.done);
+        setCurrentIndex(FACET_ORDER.indexOf(data.next.facet));
+      }
+      if (data && data.state) {
+        setSessionState(data.state as SessionState);
+      }
       if (data.evaluation?.passed) {
         setAnswer("");
         setLevel(null);
